@@ -1,0 +1,36 @@
+---
+title: 'Peer Graded Assignment: R Markdown and Leaflet'
+author: "Colleen"
+date: "4/25/2022"
+output: html_document
+---
+
+
+# Instructions
+
+Create a web page using R Markdown that features a map created with Leaflet. 
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity! 
+
+# Installing Packages and opening Leaflet
+
+```{r message=FALSE, warning=FALSE}
+library(leaflet)
+```
+
+# Create Map with Marker
+
+```{r}
+Colleens_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng=-121.995913, lat=38.29354, popup="Best Coffee in NorCal")
+```
+
+# Print your map
+
+```{r}
+Colleens_map
+```
+
